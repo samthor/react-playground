@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "react-playground",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "npm-run-all --parallel watch:js serve",
+    "watch:js": "sents src -i -c \"echo 'build'; esbuild --bundle src/index.tsx > dist.js\"",
+    "serve": "dhost"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.5",
+    "npm-run-all": "^4.1.5",
+    "sents-cli": "^0.3.4"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.0.2"
+  }
+}
